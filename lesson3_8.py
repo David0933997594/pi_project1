@@ -1,3 +1,6 @@
+#https://gpiozero.readthedocs.io/en/stable/installing.html
+#按下蜂鳴器響,放掉停止聲響
+
 import private
 import requests
 
@@ -34,12 +37,13 @@ def user_press():
     else:
         print("關燈")
         led.color=(0,0,0)
-
+#停止響
 def user_release():
     buzzer.off()
 
 button = Button(18)
 led = RGBLED(red=17, green=27, blue=22)
+#接25PIN
 buzzer = Buzzer(25)
 
 button.when_pressed = user_press
