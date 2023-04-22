@@ -25,7 +25,8 @@ import RPi.GPIO as GPIO
 import spi
 import signal
 import time
-  
+ 
+#接腳25PIN
 class MFRC522:
   NRSTPD = 25
   
